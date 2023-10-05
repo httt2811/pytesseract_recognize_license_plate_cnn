@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font icons -->
+    
+    <link rel="stylesheet" href="{{url_for('static', filename = 'assets/vendors/themify-icons/css/themify-icons.css')}}">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="{{url_for('static', filename = 'assets/css/meyawo.css')}}">
+    <title>Number Plate</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">IvoahT</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">Automatic Number Plate Recognition</span>
+                <span class="down">OCR Web</span>
+            </h1>
+            <p class="header-subtitle">INTRODUCTION TO MEDIA COMPUTING</p>
+
+        </div>
+    </header><!-- end of page header -->
+
+
+    {% block body %}{% endblock body %}
+
+
+
+     <!-- footer -->
+     <div class="container">
+        <footer class="footer">
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </footer>
+    </div> <!-- end of page footer -->
+
+
+     <!-- core  -->
+     <script src="{{url_for('static', filename = 'assets/vendors/jquery/jquery-3.4.1.js')}}"></script>
+     <script src="{{url_for('static', filename = 'ssets/vendors/bootstrap/bootstrap.bundle.js')}}"></script>
+ 
+     <!-- bootstrap 3 affix -->
+     <script src="{{url_for('static', filename = 'assets/vendors/bootstrap/bootstrap.affix.js')}}"></script>
+ 
+     <!-- Meyawo js -->
+     <script src="{{url_for('static', filename = 'assets/js/meyawo.js')}}"></script>
+</body>
+</html>
+

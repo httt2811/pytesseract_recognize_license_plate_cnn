@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">Choose Image</p>
+            <h6 class="section-title mb-5">To Convert</h6>
+            <!-- contact form -->
+            <form id="file-upload-form" action="#" class="contact-form col-md-10 col-lg-8 m-auto" method="POST" enctype="multipart/form-data">
+                <div class="form-row">
+                    <div class="form-group col-sm-12 mt-3">
+                        <input id="file-upload" type="file" name="image_name" class="btn btn-outline-primary rounded " accept="image/*" />
+                            <label for="file-upload" id="file-drag">
+                                <span id="file-upload-btn" class="btn-rounded btn btn-primary" required>Select a file</span>
+                            </label>
+                            <input type="submit" value="Upload" class="btn-rounded btn btn-primary">
+                    </div>
+                </div>
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+
+        {% if upload %}
+
+        <section class="section" id="portfolio">
+            <div class="container text-center">
+                <p class="section-subtitle">Upload Image</p>
+                <h6 class="section-title mb-5">Display</h6>
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#" class="portfolio-card">
+                            <img src="/static/upload/{{ upload_image }}"  class="portfolio-card-img">
+                            <span class="portfolio-card-overlay">
+                                <span class="portfolio-card-caption">
+                                    <p class="font-weight-normal">Original Image</p>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#" class="portfolio-card">
+                            <img class="portfolio-card-img" src="/static/predict/{{ upload_image }}" class="img-responsive rounded">
+                            <span class="portfolio-card-overlay">
+                                <span class="portfolio-card-caption">
+                                    <p class="font-weight-normal">Identified Image</p>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div><!-- end of row -->
+            </div><!-- end of container -->
+
+            <section class="section" id="testmonial">
+                <div class="container text-center">
+                    <p class="section-subtitle">Get Information</p>
+                    <h6 class="section-title mb-6">License Plates</h6>
+        
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#" class="portfolio-card">
+                                <div class="body">
+                                    <p class="section-subtitle">Text</p>
+                                </div>
+                                <img src="/static/roi/{{ upload_image }}"  class="portfolio-card-img">
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-6 col-md-4">
+                            <div class="body">
+                                <p class="section-subtitle">Text</p>
+                                <h1 style="color:#1A0000;">{{text}}</h1>
+                            </div> 
+                        </div>
+                    </div>
+                </div> <!-- end of container -->
+            </section> <!-- end of testimonial section -->
+        </section>
+
+        {% endif %}
+
+    </section><!-- end of contact section -->
+
+{% endblock  %}
